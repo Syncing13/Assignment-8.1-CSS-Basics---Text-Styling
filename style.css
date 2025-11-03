@@ -1,35 +1,142 @@
-body{
-	background: -webkit-linear-gradient(right, #00FF00, #000000, #00aa00);
-	background: -moz-linear-gradient(right, #00FF00, #000000, #00aa00);
-	background: -o-linear-gradient(right, #00FF00, #000000, #00aa00);
-	background: linear-gradient(to right, #00FF00, #000000, #00aa00);
-	color: #00FF00;
+/* Assignment 8.1: CSS Basics - Text Styling
+   Author: Mitchel Moss
+   File: style.css
+   Description:
+   Enhanced readability and visual hierarchy for constitution.html.
+   Demonstrates fonts, color, spacing, shadows, and link styling.
+*/
+
+/* Overall page layout & body text */
+body {
+    background: linear-gradient(to right, #f9f9f9, #e5e5dc);
+    color: #222;
+    font-family: "Georgia", "Times New Roman", serif;
+    line-height: 1.7;
+    padding: 1rem 3rem;
+    margin: 0;
 }
 
-h1{
-	color: #00eeff;
-	text-shadow:0 0 2px aqua;
-	font-family: times new roman, arial;
+/* Header area at the top of the page */
+header {
+    background: #ffffffee;
+    border: 2px solid #002244;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 1.5rem 2rem;
 }
 
-h2{
-	color: #000fff;
-	text-shadow:0 0 2px blue;
-	font-family: times new roman, arial;
+/* Main content container */
+main {
+    background: #ffffffd9;
+    max-width: 900px;
+    margin: 0 auto 3rem auto;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    border: 1px solid rgba(0,0,0,0.1);
 }
 
-h3{
-	color: #ffbbbb;
-	text-shadow:0 0 2px blue;
-	font-family: times new roman, arial;
+/* Footer styling */
+footer {
+    text-align: center;
+    color: #555;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    max-width: 900px;
+    margin: 0 auto 4rem auto;
+    border-top: 1px solid #ccc;
+    padding-top: 1rem;
 }
 
-p{
-	color: #00bbbb;
-	text-shadow:0 0 2px purple;
-	font-family: times new roman, arial;
+/* Top-level page title */
+h1 {
+    color: #003366;
+    text-shadow: 0 0 2px #99ccff;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0 0 0.5rem 0;
+    letter-spacing: 0.05em;
 }
 
-a:visited{
-	color: aqua;
+/* Article title ("Article I") */
+h2 {
+    color: #002244;
+    text-shadow: 0 0 2px #aaccee;
+    font-family: "Times New Roman", serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-align: center;
+    border-bottom: 2px solid #002244;
+    padding-bottom: 0.25rem;
+    margin: 0 auto 1rem auto;
+    max-width: 300px;
+}
+
+/* Section headings ("Section 1.", "Section 2.", etc.) */
+h3 {
+    color: #004488;
+    text-shadow: 0 0 1px #66aaff;
+    font-style: italic;
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+    border-left: 4px solid #004488;
+    padding-left: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+}
+
+/* Paragraph styling for Constitution text */
+p {
+    color: #333;
+    font-size: 1.05rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    text-align: justify;
+    text-indent: 2em; /* first-line indent for historical doc feel */
+}
+
+/* Make first paragraph under header stand out a bit more */
+header p {
+    color: #222;
+    background-color: #eef5ff;
+    border: 1px solid #aaccee;
+    border-radius: 6px;
+    padding: 0.75rem 1rem;
+    text-indent: 0;
+    box-shadow: inset 0 0 8px rgba(0,0,0,0.08);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Links (like "See more") */
+a {
+    color: #006699;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #004466;
+    text-decoration: underline;
+}
+
+/* Responsive tweak for small screens */
+@media (max-width: 600px) {
+    body {
+        padding: 0.5rem 1rem;
+    }
+
+    header, main, footer {
+        padding: 1rem;
+        margin: 1rem auto;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
 }
